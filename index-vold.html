@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <!-- begin SEO -->
+        <title>🤖 coder-jzq</title>
+        <meta property="og:locale" content="en-US">
+		<meta property="og:locale:alternate" content="zh-CN">
+        <meta property="og:site_name" content="coder-jzq">
+        <meta property="og:title" content="coder-jzq">
+        <link rel="canonical" href="https://Coder-jzq.github.io/">
+        <meta property="og:url" content="https://Coder-jzq.github.io/">
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Person",
+                "name": "Zhenqi Jia",
+                "url": "https://Coder-jzq.github.io",
+                "sameAs": null
+            }</script>
+        <!-- end SEO -->
+        <link href="https://Coder-jzq.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Zhenqi Jia">
+        <!-- http://t.co/dKP3o1e -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+        </script>
+        <!-- For all browsers -->
+        <link rel="stylesheet" href="https://Coder-jzq.github.io/assets/css/main.css">
+        <meta http-equiv="cleartype" content="on">
+        <!-- start custom head snippets -->
+        <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
+        <link rel="apple-touch-icon" sizes="180x180" href="https://Coder-jzq.github.io/images/apple-touch-icon-180x180.png"/>
+        <link rel="icon" type="image/svg+xml" href="https://Coder-jzq.github.io/images/favicon.svg"/>
+        <link rel="icon" type="image/png" href="https://Coder-jzq.github.io/images/favicon-32x32.png" sizes="32x32"/>
+        <link rel="icon" type="image/png" href="https://Coder-jzq.github.io/images/favicon-192x192.png" sizes="192x192"/>
+        <link rel="manifest" href="https://Coder-jzq.github.io/images/manifest.json"/>
+        <link rel="icon" href="/images/favicon.ico"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <link rel="stylesheet" href="https://Coder-jzq.github.io/assets/css/academicons.css"/>
+		<link rel="stylesheet" href="https://Coder-jzq.github.io/assets/css/paper.css">
+        <!-- Support for MatJax -->
+        <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!-- end custom head snippets -->
+		<style>
+		    .tab-content { display: none;}
+		    .active { display: block; }
+			
+			.font-time_new_roman {
+				font-family: "Times New Roman", Times, serif;
+			}
+			
+			.custom-link {
+			    color: #4f4f4f; /* 默认灰色字体 */
+			    text-decoration: underline; /* 默认下划线 */
+			    text-decoration-color: #ddd; /* 非常淡的下划线 */
+			    transition: color 0.3s, text-decoration-color 0.3s; /* 平滑过渡 */
+			  }
+			
+			.custom-link:hover {
+			    color: black; /* 鼠标划过时颜色加深 */
+			    text-decoration-color: #4f4f4f; /* 鼠标划过时下划线加深 */
+			  }
+			
+			.demo-link {
+			  color: #d793b7; /* 默认字体颜色 */
+			  text-decoration: none; /* 去掉下划线 */
+			  transition: color 0.3s; /* 平滑过渡 */
+			}
+			
+			.demo-link:hover {
+			  color: #c49cb3; /* 鼠标划过时颜色加深 */
+			}
+			
+			.ccf-sci {
+			  color: #d793b7; /* 默认字体颜色 */
+			  transition: color 0.3s; /* 平滑过渡 */
+			}
+			
+			/* ================= Achievements ================= */
+			
+			.achievement-section {
+			    margin-top: 25px;
+			    margin-bottom: 38px;
+			}
+			
+			.achievement-title {
+			    font-size: 1.65rem;
+			    color: #352c48;
+			    font-family: Arial, sans-serif;
+			    margin-bottom: 18px;
+			    font-weight: 600;
+			}
+			
+			.achievement-card {
+			    position: relative;
+			    padding: 20px 24px;
+			    margin-bottom: 18px;
+			
+			    background: linear-gradient(
+			        135deg,
+			        rgba(255, 255, 255, 0.96),
+			        rgba(248, 244, 252, 0.92)
+			    );
+			
+			    border-radius: 16px;
+			
+			    box-shadow:
+			        6px 6px 14px rgba(53, 44, 72, 0.10),
+			        -6px -6px 14px rgba(255, 255, 255, 0.95);
+			
+			    border-left: 4px solid #d793b7;
+			
+			    transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+			
+			.achievement-card:hover {
+			    transform: translateY(-2px);
+			
+			    box-shadow:
+			        8px 8px 18px rgba(53, 44, 72, 0.14),
+			        -8px -8px 18px rgba(255, 255, 255, 1);
+			}
+			
+			.achievement-year {
+			    display: inline-block;
+			
+			    padding: 3px 11px;
+			    margin-bottom: 8px;
+			
+			    border-radius: 12px;
+			
+			    background: #f3f0fa;
+			    color: #6b5b7e;
+			
+			    font-size: 0.82rem;
+			    font-weight: 600;
+			}
+			
+			.achievement-name {
+			    margin: 2px 0 7px 0;
+			
+			    color: #352c48;
+			
+			    font-size: 1.05rem;
+			    font-weight: 600;
+			    line-height: 1.55;
+			}
+			
+			.achievement-desc {
+			    margin: 0;
+			
+			    color: #555;
+			    font-size: 0.95rem;
+			    line-height: 1.7;
+			}
+			
+			.achievement-meta {
+			    margin-top: 10px;
+			
+			    color: #777;
+			    font-size: 0.88rem;
+			}
+			
+			.achievement-meta span {
+			    margin-right: 16px;
+			}
+			
+			.achievement-highlight {
+			    color: #c47fa5;
+			    font-weight: 600;
+			}
+			
+			
+			
+		</style>
+		
+		<script>
+		    function showTab(tabId) {
+		        let tabs = document.querySelectorAll('.tab-content');
+		        tabs.forEach(tab => tab.classList.remove('active'));
+		        document.getElementById(tabId).classList.add('active');
+		    }
+		</script>
+		
+		
+    </head>
+    <body>
+		<!-- 面包屑 -->
+        <div class="masthead">
+            <div class="masthead__inner-wrap">
+                <div class="masthead__menu">
+                    <nav id="site-nav" class="greedy-nav">
+                        <button>
+                            <div class="navicon"></div>
+                        </button>
+                        <ul class="visible-links">
+                            <li class="masthead__menu-item masthead__menu-item--lg">
+                                <a href="https://Coder-jzq.github.io/">Zhenqi Jia (贾真琦)</a>
+                            </li>
+                            
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" onclick="showTab('aboutme')">About me</a>
+                            </li>
+                            
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" onclick="showTab('news')">News</a>
+                            </li>
+                            
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" onclick="showTab('pubs')">Publications</a>
+                            </li>
+                        
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" onclick="showTab('achievements')">Achievements</a>
+                            </li>
+                            
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" onclick="showTab('services')">Services</a>
+                            </li>
+                        </ul>
+                        <ul class="hidden-links hidden"></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+		
+		<!-- 左侧栏 -->
+        <div id="main" role="main">
+            <div class="sidebar sticky">
+                <div itemscope itemtype="http://schema.org/Person">
+                    <div class="author__avatar">
+                        <img src="https://Coder-jzq.github.io/images/info/profile.png" class="author__avatar" alt="seven">
+                    </div>
+                    <div class="author__content">
+                        <h3 class="author__name">Zhenqi Jia (贾真琦)</h3>
+                        <p class="author__bio">Conversational Speech Synthesis.</p>
+                        <p class="author__bio">Research Interests: Multimodality, Emotion, Graph Neural Networks, Retrieval-Augmented Methods.</p>
+                    </div>
+                    <div class="author__urls-wrapper">
+                        <button class="btn btn--inverse">Follow</button>
+                        <ul class="author__urls social-icons">
+                            <!-- Font Awesome icons / Biographic information -->
+                            <li class="author__desktop">
+                                <i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>
+                                Earth
+                            </li>
+                            <li class="author__desktop">
+                                <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
+                                Inner Mongolia University
+                            </li>
+                            <li>
+                                <a href="jiazhenqi7@163.com">
+                                    <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
+                                    Email
+                                </a>
+                            </li>
+                            <!-- Font Awesome and Academicons icons / Academic websites -->
+                            <li>
+                                <a href="https://scholar.google.com.hk/citations?user=X1YblP0AAAAJ&hl=zh-CN">
+                                    <i class="ai ai-google-scholar icon-pad-right"></i>
+                                    Google Scholar
+                                </a>
+                            </li>
+                           <!-- <li>
+                                <a href="http://orcid.org/yourorcidurl">
+                                    <i class="ai ai-orcid ai-fw icon-pad-right"></i>
+                                    ORCID
+                                </a>
+                            </li> -->
+                            <!-- <li>
+                                <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow">
+                                    <i class="ai ai-pubmed ai-fw icon-pad-right"></i>
+                                    PubMed
+                                </a>
+                            </li> -->
+                            <!-- Font Awesome icons / Repositories and software development -->
+                            <li>
+                                <a href="https://github.com/Coder-jzq">
+                                    <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
+                                    GitHub
+                                </a>
+                            </li>
+                            <!-- Font Awesome icons / Social media -->
+                            <!-- <li>
+                                <a href="https://bsky.app/profile/bsky.app">
+                                    <i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>
+                                    Bluesky
+                                </a>
+                            </li> -->
+                        </ul>
+						
+						<div style="width: 50%; margin: 2rem 1rem;">
+							<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=2OYChXdS7zSOTZGbT3EbckUNC5Qj5-lSHfIEcyN_Ooo"></script>
+						</div>
+                    </div>
+                </div>
+            </div>
+            
+			<!-- 右侧切换区域 -->
+			<!-- 个人介绍 -->
+			<article id="aboutme" class="page tab-content active" >
+			    <div class="page__inner-wrap">
+			        <header>
+						<h1 id="-about-me" style="font-size: 2.4rem;">👨🏻‍💻 About Me</h1>
+						<p>Hi! I am <b>Zhenqi Jia (<a href="https://Coder-jzq.github.io/"  style="text-decoration: none; color: #4f4f4f ;">贾真琦</a>).</b> My master’s and doctoral advisor is <a href="https://ttslr.github.io/index_ruiliu.html" style="text-decoration: none;">Prof. Rui Liu.</a></p> 
+						
+						<p>Stay humble, stay hungry, keep learning.</p>
+						
+						<p>I look forward to becoming friends with you! 😊</p>
+						
+					</header>
+			        <footer class="page__meta">
+					</footer>
+			    </div>
+			</article>
+			
+			<!-- 最近消息 -->
+			<article id="news" class="page tab-content">
+			    <div class="page__inner-wrap">
+			        <header>
+					<h1 id="-news" style="font-size: 2.4rem;">🔊 News</h1>
+					<ul>
+						<hr />
+						<li>[09/2026] 🎉 Congratulations! Two of our papers (with me as a co-author) have been accepted by <b>NCMMSC 2026</b>. 🐎</li>
+						<li>[08/2026] 🎉 Our work ranked <b>4th</b> in <b>MER2026-Cross (ACM MM 2026 Challenge)</b>. 🐎</li>
+						<li>[07/2026] 🏆 Congratulations! Our paper, on which I am a co-author, received the <b>Best Paper Award</b> at <b>IMLIP 2026</b>. 🐎</li>
+						<li>[07/2026] ️🔖 "AuEmoChat: Authentic Emotion Understanding and Rendering for Conversational Speech Synthesis" accepted by <b>ACM MM 2026</b>. 🐎</li>
+						<li>[07/2026] 🎉 Congratulations! Our paper (with me as a co-author) has been accepted by <b>ACM MM 2026</b>. 🐎</li>
+						<li>[05/2026] ✨ Selected for the 6th CCF Outstanding PhD Student Academic Showcase, <b>YEF 2026</b>. 🐎</li>
+						<li>[04/2026] 🎓 Awarded funding from the <b>China Scholarship Council (CSC)</b> for the Joint PhD Program. 🐎</li>
+						<li>[04/2026] ️🎲 The graduate-level innovation project funded by Inner Mongolia University has been officially approved. 🐎</li>
+						<li>[01/2025] 🎉 Congratulations! Our paper (with me as a co-author) has been accepted by <b>ICASSP 2026</b>. 🐎</li>
+						<li>[01/2026] ️🔖 "Emphasis Rendering for Conversational Text-to-Speech with Multi-modal Multi-scale Context Modeling" accepted by <b>Speech Communication 2026</b>. 🐎</li>
+						<hr />
+						<li>[12/2025] ✨ Awarded the 2025 Doctoral Scholarship of Inner Mongolia Autonomous Region. 🐍</li>
+						<li>[11/2025] 🎉 Congratulations to Yuan Zhao! Our paper (with me as a co-author) has been accepted by <b>AAAI 2026</b>. 🐍</li>
+						<li>[11/2025] ️🔖 "Expert-Level Financial Sentiment Analysis via Internal and External Financial Knowledge Fusion" accepted by <b>Information Fusion 2025</b>. 🐍</li>
+						<li>[08/2025] ️🔖 "Multimodal Fine-grained Context Interaction Graph Modeling for Conversational Speech Synthesis" accepted by <b>EMNLP 2025 (Main)</b>. 🐍</li>
+						<li>[06/2025] 🎉 One paper (as co-author) accepted by <b>IALP 2025</b>. 🐍</li>
+					    <li>[04/2025] ️🎲 The graduate-level innovation project funded by Inner Mongolia University has been officially approved. 🐍</li>
+					    <li>[01/2025] ️🔖 "Retrieval-Augmented Dialogue Knowledge Aggregation for expressive conversational speech synthesis" accepted by <b>Information Fusion 2025</b>. 🐍</li>
+					    <hr />
+						<li>[12/2024] 🔖 "Intra- and Inter-modal Context Interaction Modeling for Conversational Speech Synthesis" accepted by <b>ICASSP 2025</b>. 🐉</li>
+					    <li>[08/2024] 🎉 One paper (as co-author) accepted by <b>NCMMSC 2024</b>. 🐉</li>
+					    <li>[05/2024] 🧩 Built the website for IALP 2024 conference. 🐉</li>
+					    <hr />
+						<li>[begin] 🤓 ️Everything started from here~️ 🚀</li>
+					  
+					</ul>
+			        </header>
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			
+			
+			<!-- 论文发表 -->
+			<article id="pubs" class="page tab-content">
+				<div class="page__inner-wrap">
+					<header>
+			
+						<!-- ================= 个人著作 ================= -->
+						<h1 style="font-size: 2rem; color: #352c48; font-family: 'Arial', sans-serif; text-align: center; margin: 20px 0;">
+							🌟 Representative Publications
+						</h1>
+						<hr />
+			
+						<div id="personal-pubs" class="pub-group">
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">ACM MM 2026</div>
+										<img src="images/papers/Conference/AuEmoChat.png" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="xxx" class="custom-link">AuEmoChat: Authentic Emotion Understanding and Rendering for Conversational Speech Synthesis.</a> <b>(Poster)</b><br />
+										<b>Zhenqi Jia</b>, Yuan Zhao, Aruukhan, Rui Liu, Haizhou Li. <b>(一作)</b><br />
+										<b class="ccf-sci">[CCF-A, CAAI-A]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">EMNLP 2025 (Main)</div>
+										<img src="images/papers/Conference/EMNLP2025-MFCIG-CSS.png" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="https://arxiv.org/abs/2511.14249" class="custom-link">Multimodal Fine-grained Context Interaction Graph Modeling for Conversational Speech Synthesis.</a> <b>(Poster)</b><br />
+										<b>Zhenqi Jia</b>, Rui Liu, Berrak Sisman, Haizhou Li. <b>(一作)</b><br />
+										<b class="ccf-sci">[CCF-B, CAAI-A]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">ICASSP 2025</div>
+										<img src="images/papers/Conference/IIICSS.png" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="https://ieeexplore.ieee.org/abstract/document/10890216" class="custom-link">Intra- and Inter-modal Context Interaction Modeling for Conversational Speech Synthesis.</a> <b>(Oral)</b><br />
+										<b>Zhenqi Jia</b>, Rui Liu. <b>(一作)</b><br />
+										<b class="ccf-sci">[CCF-B, CAAI-B]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+										
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">INFFUS 2025</div>
+										<img src="images/papers/Journal/RADKACSS.png" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="https://www.sciencedirect.com/science/article/pii/S1566253525000211" class="custom-link">Retrieval-Augmented Dialogue Knowledge Aggregation for expressive conversational speech synthesis.</a><br />
+										Rui Liu, <b>Zhenqi Jia</b>, Feilong Bao, Haizhou Li. <b>(导师外一作)</b><br />
+										<b class="ccf-sci">[ SCI一区 Top, CAAI-A]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">SPECOM 2026</div>
+										<img src="images/papers/Journal/ER-CTTS.png" alt="sym" width="100%" />
+									</div>
+								</div>
+			
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="https://arxiv.org/abs/2410.09524" class="custom-link">Emphasis Rendering for Conversational Text-to-Speech with Multi-modal Multi-scale Context Modeling</a><br />
+										Rui Liu, <b>Zhenqi Jia</b>, Jie Yang, Yifan Hu, Haizhou Li. <b>(导师外一作)</b><br />
+										<b class="ccf-sci">[ CCF-B, CAAI-B]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+			
+			
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">INFFUS 2025</div>
+										<img src="images/papers/Journal/FSAExpert.png" alt="sym" width="100%" />
+									</div>
+								</div>
+			
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="https://www.sciencedirect.com/science/article/pii/S1566253525009467" class="custom-link">Expert-Level Financial Sentiment Analysis via Internal and External Financial Knowledge Fusion.</a><br />
+										Lei Shi, <b>Zhenqi Jia<sup>*</sup></b>, Rui Liu. <b>(通讯作者)</b><br />
+										<b class="ccf-sci">[ SCI一区 Top, CAAI-A]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							
+			
+						</div>
+			
+						
+						<div style="text-align: center; margin-top: 22px; margin-bottom: 35px;">
+							<button type="button" class="pub-toggle-btn" data-target="personal-pubs"
+								style="
+									border: none;
+									border-radius: 18px;
+									padding: 9px 26px;
+									background: #f3f0fa;
+									color: #4b4263;
+									cursor: pointer;
+									font-size: 0.95rem;
+									font-weight: 500;
+									box-shadow: 6px 6px 12px rgba(53, 44, 72, 0.16),
+									            -6px -6px 12px rgba(255, 255, 255, 0.95);
+									transition: all 0.2s ease;
+								">
+								Show More
+							</button>
+						</div>
+			
+			
+						<!-- ================= 合作著作 ================= -->
+						<h1 style="font-size: 2rem; color: #352c48; text-align: center; font-family: 'Arial', sans-serif; text-align: center; margin: 20px 0;">
+							🤝 Co-authored Publications
+						</h1>
+
+						<hr />
+			
+						<div id="collab-pubs" class="pub-group">
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">IMLIP 2026</div>
+										<img src="xxx" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="xxx" class="custom-link">Parallel Data Generation for Mongolian Homoglyph Spelling Correction Using Linguistic Knowledge and Statistical Features.</a> <b>(🏆 Best Paper)</b><br />
+										Aruukhan, Feilong Bao, <b>Zhenqi Jia</b>, Dianqing Lin, Hui Zhang, Guanglai Gao. <b>(三作)</b><br />
+										<b class="ccf-sci">[EI]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">ACM MM 2026</div>
+										<img src="images/papers/Conference/MAR3.png" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="xxx" class="custom-link">MAR3: Multi-Agent Recognition, Reasoning, and Reflection for Reference Audio-Visual Segmentation.</a> <b>(Poster)</b><br />
+										Yuan Zhao, <b>Zhenqi Jia</b>, Yongqiang Zhang. <b>(二作)</b><br />
+										<b class="ccf-sci">[ CCF-A, CAAI-A]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">MRAC 2026@ACMMM 2026</div>
+										<img src="images/papers/Conference/MER26-MMWorkShop.png" alt="sym" width="100%" />
+									</div>
+								</div>
+										
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="xxx" class="custom-link">HEART: Heterogeneous Expert Augmentation with Recursive Target Adaptation for Interlocutor Emotion Recognition.</a> <b>(WorkShop)</b><br />
+										Junshuai Zhang, <b>Zhenqi Jia</b>, Yifan Hu, Haolin Zuo, Rui Liu. <b>(二作)</b><br />
+										<b class="ccf-sci">[MER2026-Cross, 4th Place]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">AAAI 2026</div>
+										<img src="images/papers/Conference/AAAI2026-yuan.jpg" alt="sym" width="100%" />
+									</div>
+								</div>
+			
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="xxx" class="custom-link">Towards Authentic Movie Dubbing with Retrieve-Augmented Director-Actor Interaction Learning.</a> <b>(Poster)</b><br />
+										Rui Liu, Yuan Zhao, <b>Zhenqi Jia</b>. <b>(三作)</b><br />
+										<b class="ccf-sci">[ CCF-A, CAAI-A]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+							
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">ICASSP 2026</div>
+										<img src="images/papers/Conference/ICASSP2026.png" alt="sym" width="100%" />
+									</div>
+								</div>
+			
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="xxx" class="custom-link">Emotion and Acoustics Should Agree: Cross-Level Inconsistency Analysis for Audio Deepfake Detection.</a> <b>(Poster)</b><br />
+										Jinhua Zhang, <b>Zhenqi Jia</b>, Rui Liu. <b>(二作)</b><br />
+										<b class="ccf-sci">[ CCF-B, CAAI-B]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+			
+							<!-- paper 分割线 -->
+							<div class="paper-box pub-item">
+								<div style="width: 30%;" class="paper-box-image">
+									<div>
+										<div class="badge">NCMMSC 2024</div>
+										<img src="images/papers/Conference/MCDubber.png" alt="sym" width="100%" />
+									</div>
+								</div>
+			
+								<div style="width: 70%;" class="paper-box-text">
+									<p class="font-time_new_roman">
+										<a href="https://arxiv.org/pdf/2408.11593" class="custom-link">Mcdubber: Multimodal context-aware expressive video dubbing.</a> <b>(Oral)</b><br />
+										Yuan Zhao, <b>Zhenqi Jia</b>, Rui Liu, De Hu, Feilong Bao, and Guanglai Gao. <b>(二作)</b><br />
+										<b class="ccf-sci">[CCF-C]</b>
+									</p>
+								</div>
+							</div>
+							<!-- paper 分割线 -->
+			
+						</div>
+			
+						
+						<div style="text-align: center; margin-top: 22px; margin-bottom: 35px;">
+							<button type="button" class="pub-toggle-btn" data-target="collab-pubs"
+								style="
+									border: none;
+									border-radius: 18px;
+									padding: 9px 26px;
+									background: #f3f0fa;
+									color: #4b4263;
+									cursor: pointer;
+									font-size: 0.95rem;
+									font-weight: 500;
+									box-shadow: 6px 6px 12px rgba(53, 44, 72, 0.16),
+									            -6px -6px 12px rgba(255, 255, 255, 0.95);
+									transition: all 0.2s ease;
+								">
+								Show More
+							</button>
+						</div>
+					</header>
+			
+					<footer class="page__meta"></footer>
+				</div>
+			</article>
+
+
+
+			<!-- ================= Achievements ================= -->
+			<article id="achievements" class="page tab-content">
+			    <div class="page__inner-wrap">
+			        <header>
+			
+			            <h1 style="
+			                font-size: 2.4rem;
+			                color: #352c48;
+			                font-family: Arial, sans-serif;
+			                margin-bottom: 30px;
+			            ">
+			                🏅 Achievements
+			            </h1>
+			
+			
+			            <!-- ================= Honors ================= -->
+			            <div class="achievement-section">
+			
+			                <h2 class="achievement-title">
+			                    🎓 Honors
+			                </h2>
+			
+			                <div class="achievement-card">
+			
+			                    <span class="achievement-year">2026</span>
+			
+			                    <div class="achievement-name">
+			                        China Scholarship Council (CSC) Joint PhD Program
+			                    </div>
+			
+			                    <p class="achievement-desc">
+			                        Awarded funding from the
+			                        <b>China Scholarship Council (CSC)</b>
+			                        for a Joint PhD Program, with a planned research visit to
+			                        <b>CVSSP, University of Surrey</b>,
+			                        under the supervision of
+			                        <b>Prof. Wenwu Wang</b>.
+			                    </p>
+			
+			                </div>
+			
+			            </div>
+			
+			
+			            <!-- ================= Projects ================= -->
+			            <div class="achievement-section">
+			
+			                <h2 class="achievement-title">
+			                    🚀 Projects
+			                </h2>
+			
+			
+			                <!-- Project 1 -->
+			                <div class="achievement-card">
+			
+			                    <span class="achievement-year">2026</span>
+			
+			                    <div class="achievement-name">
+			                        面向拟人化情感表达与高效上下文理解的对话语音合成大模型关键技术研究
+			                    </div>
+			
+			                    <p class="achievement-desc">
+			                        Doctoral Innovation Research Project,
+			                        <b>Inner Mongolia University</b>.
+			                    </p>
+			
+			                    <div class="achievement-meta">
+			                        <span>
+			                            <b>Role:</b>
+			                            <span class="achievement-highlight">
+			                                Principal Investigator
+			                            </span>
+			                        </span>
+			
+			                        <span>
+			                            <b>Funding:</b> ¥10,000
+			                        </span>
+			                    </div>
+			
+			                </div>
+			
+			
+			                <!-- Project 2 -->
+			                <div class="achievement-card">
+			
+			                    <span class="achievement-year">2026</span>
+			
+			                    <div class="achievement-name">
+			                        基于多模态多尺度上下文建模的重音对话语音合成
+			                    </div>
+			
+			                    <p class="achievement-desc">
+			                        Master's Innovation Research Project,
+			                        <b>Inner Mongolia University</b>.
+			                    </p>
+			
+			                    <div class="achievement-meta">
+			                        <span>
+			                            <b>Role:</b>
+			                            <span class="achievement-highlight">
+			                                Principal Investigator
+			                            </span>
+			                        </span>
+			
+			                        <span>
+			                            <b>Funding:</b> ¥4,000
+			                        </span>
+			                    </div>
+			
+			                </div>
+			
+			
+			            </div>
+			
+			        </header>
+			
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			<!-- ================= Achievements End ================= -->
+
+
+
+
+			
+			<!-- 服务项 -->
+			<article id="services" class="page tab-content" >
+			    <div class="page__inner-wrap">
+					<header>
+					    <h1 id="-servs" style="font-size: 2.4rem;">🤦‍♂️️ Reviewing Experience</h1>
+					    <ul>
+					        <li><strong>Journal Reviewer:</strong>TASLP 2026, ESWA 2026, DI 2025</li>
+					        <li><strong>Conference Reviewer:</strong> AAAI 2026/2027, ICASSP 2025/2026/2027, ICMR 2026, IJCNN 2025/2027, NCMMSC 2026, CIKM 2026 Workshop LASS 2026</li>
+					    </ul>
+					</header>
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			
+			
+        </div>
+        <div class="page__footer">
+            <footer>
+                <!-- start custom footer snippets -->
+                <a href="/sitemap/">Sitemap</a>
+                <!-- end custom footer snippets -->
+                <div class="page__footer-follow">
+                    <ul class="social-icons">
+                        <li>
+                            <strong>Follow:</strong>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Coder-jzq" >
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				<div class="page__footer-copyright">
+				    &copy;2025 Zhenqi Jia, Published with GitHub Pages, powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
+				    &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>
+				    , a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+					</br>Inspired by <a href="https://ttslr.github.io/" class="custom-link">[1]</a>, <a href="https://jiaxin-ye.github.io//" class="custom-link">[2]</a>.
+				</div>
+            </footer>
+        </div>
+        <script src="https://Coder-jzq.github.io/assets/js/main.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var defaultVisibleCount = 5;
+			
+				document.querySelectorAll('.pub-group').forEach(function (group) {
+					var items = Array.prototype.slice.call(group.querySelectorAll('.pub-item'));
+					var button = document.querySelector('.pub-toggle-btn[data-target="' + group.id + '"]');
+			
+					if (!button) return;
+			
+					var expanded = false;
+			
+					function renderPubItems() {
+						items.forEach(function (item, index) {
+							if (expanded || index < defaultVisibleCount) {
+								item.style.display = '';
+							} else {
+								item.style.display = 'none';
+							}
+						});
+			
+						if (items.length <= defaultVisibleCount) {
+							button.style.display = 'none';
+						} else {
+							button.style.display = 'inline-block';
+							button.textContent = expanded ? 'Show Less' : 'Show More';
+						}
+					}
+			
+					button.addEventListener('click', function () {
+						expanded = !expanded;
+						renderPubItems();
+			
+						if (!expanded) {
+							group.scrollIntoView({
+								behavior: 'smooth',
+								block: 'start'
+							});
+						}
+					});
+			
+					renderPubItems();
+				});
+			});
+		</script>
+    </body>
+</html>

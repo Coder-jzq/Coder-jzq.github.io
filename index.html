@@ -27,6 +27,18 @@
         <script>
             document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
         </script>
+
+		<script>
+			(function () {
+				try {
+					var savedTheme = localStorage.getItem('jzq-color-theme') || 'pink';
+					document.documentElement.setAttribute('data-theme', savedTheme);
+				} catch (e) {
+					document.documentElement.setAttribute('data-theme', 'pink');
+				}
+			})();
+		</script>
+
         <!-- For all browsers -->
         <link rel="stylesheet" href="https://Coder-jzq.github.io/assets/css/main.css">
         <meta http-equiv="cleartype" content="on">
@@ -79,13 +91,709 @@
 			  color: #d793b7; /* 默认字体颜色 */
 			  transition: color 0.3s; /* 平滑过渡 */
 			}
+			
+			/* ================= Achievements ================= */
+			
+			.achievement-section {
+			    margin-top: 25px;
+			    margin-bottom: 38px;
+			}
+			
+			.achievement-title {
+			    font-size: 1.65rem;
+			    color: #352c48;
+			    font-family: Arial, sans-serif;
+			    margin-bottom: 18px;
+			    font-weight: 600;
+			}
+			
+			.achievement-card {
+			    position: relative;
+			    padding: 20px 24px;
+			    margin-bottom: 18px;
+			
+			    background: linear-gradient(
+			        135deg,
+			        rgba(255, 255, 255, 0.96),
+			        rgba(248, 244, 252, 0.92)
+			    );
+			
+			    border-radius: 16px;
+			
+			    box-shadow:
+			        6px 6px 14px rgba(53, 44, 72, 0.10),
+			        -6px -6px 14px rgba(255, 255, 255, 0.95);
+			
+			    border-left: 4px solid #d793b7;
+			
+			    transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+			
+			.achievement-card:hover {
+			    transform: translateY(-2px);
+			
+			    box-shadow:
+			        8px 8px 18px rgba(53, 44, 72, 0.14),
+			        -8px -8px 18px rgba(255, 255, 255, 1);
+			}
+			
+			.achievement-year {
+			    display: inline-block;
+			
+			    padding: 3px 11px;
+			    margin-bottom: 8px;
+			
+			    border-radius: 12px;
+			
+			    background: #f3f0fa;
+			    color: #6b5b7e;
+			
+			    font-size: 0.82rem;
+			    font-weight: 600;
+			}
+			
+			.achievement-name {
+			    margin: 2px 0 7px 0;
+			
+			    color: #352c48;
+			
+			    font-size: 1.05rem;
+			    font-weight: 600;
+			    line-height: 1.55;
+			}
+			
+			.achievement-desc {
+			    margin: 0;
+			
+			    color: #555;
+			    font-size: 0.95rem;
+			    line-height: 1.7;
+			}
+			
+			.achievement-meta {
+			    margin-top: 10px;
+			
+			    color: #777;
+			    font-size: 0.88rem;
+			}
+			
+			.achievement-meta span {
+			    margin-right: 16px;
+			}
+			
+			.achievement-highlight {
+			    color: #c47fa5;
+			    font-weight: 600;
+			}
+			
+			
+			
+
+			/* ================= Global Page Style ================= */
+
+			.academic-page-title {
+			    font-size: 2.35rem;
+			    color: #352c48;
+			    font-family: Arial, sans-serif;
+			    font-weight: 650;
+			    margin: 10px 0 28px 0;
+			}
+
+			.academic-card {
+			    position: relative;
+			    padding: 20px 24px;
+			    margin-bottom: 18px;
+			    background: linear-gradient(
+			        135deg,
+			        rgba(255, 255, 255, 0.97),
+			        rgba(248, 244, 252, 0.92)
+			    );
+			    border-radius: 16px;
+			    border-left: 4px solid #d793b7;
+			    box-shadow:
+			        6px 6px 14px rgba(53, 44, 72, 0.10),
+			        -6px -6px 14px rgba(255, 255, 255, 0.95);
+			    transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.academic-card:hover {
+			    transform: translateY(-2px);
+			    box-shadow:
+			        8px 8px 18px rgba(53, 44, 72, 0.14),
+			        -8px -8px 18px rgba(255, 255, 255, 1);
+			}
+
+			/* ================= Top Navigation ================= */
+
+			.masthead__menu-item:not(.masthead__menu-item--lg) > a {
+			    padding: 7px 14px !important;
+			    margin: 0 2px;
+			    border-radius: 16px;
+			    color: #4b4263 !important;
+			    transition:
+			        background 0.2s ease,
+			        color 0.2s ease,
+			        box-shadow 0.2s ease,
+			        transform 0.2s ease;
+			}
+
+			.masthead__menu-item:not(.masthead__menu-item--lg) > a:hover {
+			    background: #f6f1f7;
+			    color: #c47fa5 !important;
+			    box-shadow:
+			        3px 3px 8px rgba(53, 44, 72, 0.08),
+			        -3px -3px 8px rgba(255, 255, 255, 0.90);
+			    transform: translateY(-1px);
+			}
+
+			.masthead__menu-item > a.active-nav {
+			    background: linear-gradient(135deg, #f7edf4, #f3f0fa);
+			    color: #b86f99 !important;
+			    font-weight: 600;
+			    box-shadow:
+			        inset 2px 2px 5px rgba(53, 44, 72, 0.06),
+			        inset -2px -2px 5px rgba(255, 255, 255, 0.90);
+			}
+
+			/* ================= About Me ================= */
+
+			.about-card {
+			    padding: 26px 28px;
+			}
+
+			.about-intro {
+			    font-size: 1rem;
+			    color: #4f4f4f;
+			    line-height: 1.85;
+			    margin: 0;
+			}
+
+			.about-intro a {
+			    color: #b8759d;
+			    font-weight: 600;
+			    text-decoration: none;
+			}
+
+			.about-intro a:hover {
+			    color: #9d5f84;
+			}
+
+			.about-motto {
+			    margin-top: 20px;
+			    padding-top: 16px;
+			    border-top: 1px solid rgba(215, 147, 183, 0.22);
+			    color: #777;
+			    font-size: 0.94rem;
+			    font-style: italic;
+			    line-height: 1.8;
+			}
+
+			/* ================= News ================= */
+
+			.news-list {
+			    padding: 0;
+			    margin: 0;
+			    list-style: none;
+			}
+
+			.news-list li {
+			    position: relative;
+			    padding: 14px 18px 14px 22px;
+			    margin-bottom: 12px;
+			    border-radius: 13px;
+			    background: linear-gradient(
+			        135deg,
+			        rgba(255, 255, 255, 0.96),
+			        rgba(249, 246, 251, 0.90)
+			    );
+			    box-shadow:
+			        4px 4px 10px rgba(53, 44, 72, 0.07),
+			        -4px -4px 10px rgba(255, 255, 255, 0.90);
+			    color: #505050;
+			    line-height: 1.65;
+			    transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.news-list li::before {
+			    content: "";
+			    position: absolute;
+			    left: 0;
+			    top: 15%;
+			    bottom: 15%;
+			    width: 3px;
+			    background: #d793b7;
+			    border-radius: 3px;
+			}
+
+			.news-list li:hover {
+			    transform: translateX(3px);
+			    box-shadow:
+			        6px 6px 14px rgba(53, 44, 72, 0.10),
+			        -5px -5px 12px rgba(255, 255, 255, 1);
+			}
+
+			.news-list li b {
+			    color: #413750;
+			}
+
+			.news-list hr {
+			    border: none;
+			    height: 1px;
+			    margin: 24px 4px;
+			    background: linear-gradient(
+			        to right,
+			        transparent,
+			        rgba(215, 147, 183, 0.45),
+			        transparent
+			    );
+			}
+
+			/* ================= Services ================= */
+
+			.service-card {
+			    margin-bottom: 18px;
+			}
+
+			.service-title {
+			    font-size: 1.05rem;
+			    font-weight: 650;
+			    color: #352c48;
+			    margin-bottom: 10px;
+			}
+
+			.service-content {
+			    margin: 0;
+			    color: #555;
+			    line-height: 1.75;
+			}
+
+			.service-tag {
+			    display: inline-block;
+			    background: #f3f0fa;
+			    color: #655876;
+			    border-radius: 12px;
+			    padding: 4px 10px;
+			    margin: 3px 4px 3px 0;
+			    font-size: 0.86rem;
+			    transition: all 0.2s ease;
+			}
+
+			.service-tag:hover {
+			    background: #f4e9f0;
+			    color: #b56f98;
+			    transform: translateY(-1px);
+			}
+
+			/* ================= Responsive ================= */
+
+			@media (max-width: 768px) {
+			    .academic-page-title {
+			        font-size: 1.9rem;
+			    }
+
+			    .academic-card {
+			        padding: 18px 18px;
+			    }
+
+			    .masthead__menu-item:not(.masthead__menu-item--lg) > a {
+			        padding: 6px 9px !important;
+			    }
+			}
+
+
+			/* =========================================================
+			   Theme Switcher
+			   ========================================================= */
+
+			html,
+			body,
+			.masthead,
+			.page__footer,
+			.academic-card,
+			.achievement-card,
+			.news-list li,
+			.paper-box,
+			.service-tag,
+			.pub-toggle-btn {
+				transition:
+					background 0.35s ease,
+					background-color 0.35s ease,
+					border-color 0.35s ease,
+					color 0.35s ease,
+					box-shadow 0.35s ease;
+			}
+
+			.theme-switcher-wrap {
+				position: fixed;
+				right: 22px;
+				bottom: 22px;
+				z-index: 9999;
+			}
+
+			.theme-switcher {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+
+				border: 1px solid rgba(215, 147, 183, 0.24);
+				border-radius: 999px;
+
+				padding: 9px 13px;
+
+				background: rgba(255, 252, 255, 0.88);
+				color: #5b4a66;
+
+				font-family: Arial, sans-serif;
+				font-size: 0.82rem;
+				font-weight: 600;
+
+				cursor: pointer;
+
+				backdrop-filter: blur(14px);
+				-webkit-backdrop-filter: blur(14px);
+
+				box-shadow:
+					0 8px 24px rgba(72, 54, 84, 0.12),
+					inset 0 1px 0 rgba(255, 255, 255, 0.82);
+
+				transition:
+					transform 0.2s ease,
+					background 0.3s ease,
+					border-color 0.3s ease,
+					box-shadow 0.3s ease,
+					color 0.3s ease;
+			}
+
+			.theme-switcher:hover {
+				transform: translateY(-2px);
+				box-shadow:
+					0 12px 28px rgba(72, 54, 84, 0.16),
+					inset 0 1px 0 rgba(255, 255, 255, 0.90);
+			}
+
+			.theme-switcher-icon {
+				width: 25px;
+				height: 25px;
+
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+
+				border-radius: 50%;
+
+				background: linear-gradient(135deg, #f8dfe9, #eee8fb);
+				box-shadow:
+					inset 1px 1px 3px rgba(255, 255, 255, 0.9),
+					2px 2px 6px rgba(76, 55, 86, 0.10);
+
+				font-size: 0.85rem;
+			}
+
+			.theme-switcher-text {
+				white-space: nowrap;
+			}
+
+			.theme-switcher-dot {
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background: #d793b7;
+				box-shadow: 0 0 0 3px rgba(215, 147, 183, 0.10);
+			}
+
+
+			/* =========================================================
+			   Ice Blue / Lilac Theme
+			   Inspired by the supplied light-blue dashboard reference
+			   ========================================================= */
+
+			html[data-theme="ice"] body {
+				background:
+					radial-gradient(circle at 10% 12%, rgba(215, 235, 255, 0.86), transparent 30%),
+					radial-gradient(circle at 88% 10%, rgba(231, 226, 255, 0.68), transparent 32%),
+					linear-gradient(135deg, #edf6ff 0%, #f8fbff 52%, #f3f0ff 100%);
+				color: #26334c;
+			}
+
+			html[data-theme="ice"] .masthead {
+				background: rgba(250, 253, 255, 0.82);
+				border-bottom: 1px solid rgba(111, 151, 207, 0.13);
+				backdrop-filter: blur(16px);
+				-webkit-backdrop-filter: blur(16px);
+				box-shadow: 0 6px 24px rgba(62, 97, 143, 0.06);
+			}
+
+			html[data-theme="ice"] .masthead__menu-item--lg > a {
+				color: #1d2b45 !important;
+			}
+
+			html[data-theme="ice"] .masthead__menu-item:not(.masthead__menu-item--lg) > a {
+				color: #53647d !important;
+			}
+
+			html[data-theme="ice"] .masthead__menu-item:not(.masthead__menu-item--lg) > a:hover {
+				background: linear-gradient(
+					135deg,
+					rgba(226, 240, 255, 0.92),
+					rgba(239, 234, 255, 0.90)
+				);
+
+				color: #4f7fc1 !important;
+
+				box-shadow:
+					3px 3px 8px rgba(75, 111, 160, 0.08),
+					-3px -3px 8px rgba(255, 255, 255, 0.88);
+			}
+
+			html[data-theme="ice"] .masthead__menu-item > a.active-nav {
+				background: linear-gradient(135deg, #e3f0ff, #eeeaff);
+				color: #4f7fc1 !important;
+
+				box-shadow:
+					inset 2px 2px 5px rgba(74, 113, 164, 0.06),
+					inset -2px -2px 5px rgba(255, 255, 255, 0.92);
+			}
+
+			html[data-theme="ice"] .academic-page-title,
+			html[data-theme="ice"] .achievement-title,
+			html[data-theme="ice"] .achievement-name,
+			html[data-theme="ice"] .service-title {
+				color: #1d2b45;
+			}
+
+			html[data-theme="ice"] .academic-card,
+			html[data-theme="ice"] .achievement-card {
+				background:
+					linear-gradient(
+						135deg,
+						rgba(255, 255, 255, 0.93),
+						rgba(245, 249, 255, 0.88) 58%,
+						rgba(248, 246, 255, 0.88)
+					);
+
+				border-left-color: #73a3df;
+
+				box-shadow:
+					8px 10px 26px rgba(71, 105, 151, 0.10),
+					-6px -6px 18px rgba(255, 255, 255, 0.88);
+
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+			}
+
+			html[data-theme="ice"] .academic-card:hover,
+			html[data-theme="ice"] .achievement-card:hover {
+				box-shadow:
+					10px 14px 30px rgba(71, 105, 151, 0.15),
+					-7px -7px 20px rgba(255, 255, 255, 0.94);
+			}
+
+			html[data-theme="ice"] .about-intro,
+			html[data-theme="ice"] .achievement-desc,
+			html[data-theme="ice"] .service-content {
+				color: #465670;
+			}
+
+			html[data-theme="ice"] .about-intro a,
+			html[data-theme="ice"] .achievement-highlight {
+				color: #5687c8;
+			}
+
+			html[data-theme="ice"] .about-intro a:hover {
+				color: #416fae;
+			}
+
+			html[data-theme="ice"] .about-motto {
+				color: #6c7c93;
+				border-top-color: rgba(103, 151, 211, 0.20);
+			}
+
+			html[data-theme="ice"] .achievement-year {
+				background: linear-gradient(135deg, #e3f0ff, #eeebff);
+				color: #5276a8;
+			}
+
+			html[data-theme="ice"] .achievement-meta {
+				color: #708096;
+			}
+
+			html[data-theme="ice"] .news-list li {
+				background:
+					linear-gradient(
+						135deg,
+						rgba(255, 255, 255, 0.92),
+						rgba(243, 249, 255, 0.86)
+					);
+
+				color: #465670;
+
+				box-shadow:
+					5px 7px 18px rgba(71, 105, 151, 0.08),
+					-4px -4px 12px rgba(255, 255, 255, 0.85);
+			}
+
+			html[data-theme="ice"] .news-list li::before {
+				background: linear-gradient(#75a7e4, #9c91de);
+			}
+
+			html[data-theme="ice"] .news-list li b {
+				color: #263754;
+			}
+
+			html[data-theme="ice"] .news-list hr {
+				background: linear-gradient(
+					to right,
+					transparent,
+					rgba(103, 151, 211, 0.42),
+					rgba(157, 143, 221, 0.28),
+					transparent
+				);
+			}
+
+			html[data-theme="ice"] .service-tag {
+				background: linear-gradient(135deg, #e6f2ff, #f0edff);
+				color: #526f98;
+				border: 1px solid rgba(104, 151, 211, 0.14);
+			}
+
+			html[data-theme="ice"] .service-tag:hover {
+				background: linear-gradient(135deg, #dbeeff, #e8e5ff);
+				color: #456fa9;
+			}
+
+			html[data-theme="ice"] .custom-link {
+				color: #445875;
+				text-decoration-color: rgba(92, 137, 195, 0.28);
+			}
+
+			html[data-theme="ice"] .custom-link:hover {
+				color: #315f9d;
+				text-decoration-color: #6e9dd7;
+			}
+
+			html[data-theme="ice"] .demo-link,
+			html[data-theme="ice"] .ccf-sci {
+				color: #5d8fce;
+			}
+
+			html[data-theme="ice"] .demo-link:hover {
+				color: #4779b8;
+			}
+
+			/* Publication cards inherit the Ice theme without changing layout */
+			html[data-theme="ice"] .paper-box {
+				background:
+					linear-gradient(
+						135deg,
+						rgba(255, 255, 255, 0.93),
+						rgba(244, 249, 255, 0.88),
+						rgba(249, 247, 255, 0.86)
+					) !important;
+
+				border: 1px solid rgba(101, 147, 205, 0.14);
+
+				box-shadow:
+					8px 10px 24px rgba(71, 105, 151, 0.09),
+					-5px -5px 16px rgba(255, 255, 255, 0.82);
+			}
+
+			html[data-theme="ice"] .badge {
+				background: linear-gradient(135deg, #6fa5e3, #7e8fdc) !important;
+				color: #ffffff !important;
+				box-shadow: 0 6px 14px rgba(91, 133, 190, 0.20);
+			}
+
+			html[data-theme="ice"] .pub-toggle-btn {
+				background: linear-gradient(135deg, #e5f1ff, #eeeaff) !important;
+				color: #4e6f9b !important;
+
+				box-shadow:
+					6px 6px 12px rgba(71, 105, 151, 0.12),
+					-6px -6px 12px rgba(255, 255, 255, 0.92) !important;
+			}
+
+			html[data-theme="ice"] .page__footer {
+				background:
+					linear-gradient(
+						135deg,
+						rgba(237, 246, 255, 0.92),
+						rgba(245, 242, 255, 0.92)
+					);
+				color: #60718a;
+				border-top: 1px solid rgba(97, 143, 202, 0.12);
+			}
+
+			html[data-theme="ice"] .theme-switcher {
+				border-color: rgba(105, 151, 211, 0.25);
+
+				background:
+					linear-gradient(
+						135deg,
+						rgba(247, 252, 255, 0.90),
+						rgba(244, 242, 255, 0.90)
+					);
+
+				color: #4d6382;
+
+				box-shadow:
+					0 10px 28px rgba(68, 105, 151, 0.15),
+					inset 0 1px 0 rgba(255, 255, 255, 0.90);
+			}
+
+			html[data-theme="ice"] .theme-switcher-icon {
+				background: linear-gradient(135deg, #dcecff, #e8e3ff);
+
+				box-shadow:
+					inset 1px 1px 3px rgba(255, 255, 255, 0.9),
+					2px 2px 6px rgba(68, 105, 151, 0.12);
+			}
+
+			html[data-theme="ice"] .theme-switcher-dot {
+				background: #6e9fda;
+				box-shadow: 0 0 0 3px rgba(110, 159, 218, 0.11);
+			}
+
+			@media (max-width: 768px) {
+				.theme-switcher-wrap {
+					right: 14px;
+					bottom: 14px;
+				}
+
+				.theme-switcher {
+					padding: 8px 10px;
+				}
+
+				.theme-switcher-text {
+					display: none;
+				}
+			}
+
 		</style>
 		
 		<script>
 		    function showTab(tabId) {
-		        let tabs = document.querySelectorAll('.tab-content');
-		        tabs.forEach(tab => tab.classList.remove('active'));
-		        document.getElementById(tabId).classList.add('active');
+		        const tabs = document.querySelectorAll('.tab-content');
+		        tabs.forEach(function(tab) {
+		            tab.classList.remove('active');
+		        });
+
+		        const target = document.getElementById(tabId);
+		        if (target) {
+		            target.classList.add('active');
+		        }
+
+		        const navLinks = document.querySelectorAll('.masthead__menu-item a[data-tab]');
+		        navLinks.forEach(function(link) {
+		            link.classList.remove('active-nav');
+		            if (link.dataset.tab === tabId) {
+		                link.classList.add('active-nav');
+		            }
+		        });
+
+		        window.scrollTo({
+		            top: 0,
+		            behavior: 'smooth'
+		        });
 		    }
 		</script>
 		
@@ -104,23 +812,26 @@
                             <li class="masthead__menu-item masthead__menu-item--lg">
                                 <a href="https://Coder-jzq.github.io/">Zhenqi Jia (贾真琦)</a>
                             </li>
-							
-							<li class="masthead__menu-item">
-							    <a href="javascript:void(0);" onclick="showTab('aboutme')">About me</a>
-							</li>
-							
-							<li class="masthead__menu-item">
-							    <a href="javascript:void(0);" onclick="showTab('news')">News</a>
-							</li>
-							
-							<li class="masthead__menu-item">
-							    <a href="javascript:void(0);" onclick="showTab('pubs')">Publications</a>
-							</li>
-                            
-							<li class="masthead__menu-item">
-							    <a href="javascript:void(0);" onclick="showTab('services')">Services</a>
-							</li>
-                            
+
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" data-tab="aboutme" class="active-nav" onclick="showTab('aboutme')">About me</a>
+                            </li>
+
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" data-tab="news" onclick="showTab('news')">News</a>
+                            </li>
+
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" data-tab="pubs" onclick="showTab('pubs')">Publications</a>
+                            </li>
+
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" data-tab="achievements" onclick="showTab('achievements')">Achievements</a>
+                            </li>
+
+                            <li class="masthead__menu-item">
+                                <a href="javascript:void(0);" data-tab="services" onclick="showTab('services')">Services</a>
+                            </li>
                         </ul>
                         <ul class="hidden-links hidden"></ul>
                     </nav>
@@ -128,6 +839,22 @@
             </div>
         </div>
 		
+		<!-- 配色切换 -->
+		<div class="theme-switcher-wrap">
+			<button
+				id="themeSwitcher"
+				class="theme-switcher"
+				type="button"
+				onclick="toggleColorTheme()"
+				aria-label="Switch color theme"
+				title="Switch color theme"
+			>
+				<span id="themeSwitcherIcon" class="theme-switcher-icon">🌸</span>
+				<span id="themeSwitcherText" class="theme-switcher-text">Soft Pink</span>
+				<span class="theme-switcher-dot"></span>
+			</button>
+		</div>
+
 		<!-- 左侧栏 -->
         <div id="main" role="main">
             <div class="sidebar sticky">
@@ -202,19 +929,31 @@
             
 			<!-- 右侧切换区域 -->
 			<!-- 个人介绍 -->
-			<article id="aboutme" class="page tab-content active" >
+			<article id="aboutme" class="page tab-content active">
 			    <div class="page__inner-wrap">
 			        <header>
-						<h1 id="-about-me" style="font-size: 2.4rem;">👨🏻‍💻 About Me</h1>
-						<p>Hi! I am <b>Zhenqi Jia (<a href="https://Coder-jzq.github.io/"  style="text-decoration: none; color: #4f4f4f ;">贾真琦</a>).</b> My master’s and doctoral advisor is <a href="https://ttslr.github.io/index_ruiliu.html" style="text-decoration: none;">Prof. Rui Liu.</a></p> 
-						
-						<p>Stay humble, stay hungry, keep learning.</p>
-						
-						<p>I look forward to becoming friends with you! 😊</p>
-						
-					</header>
-			        <footer class="page__meta">
-					</footer>
+			            <h1 class="academic-page-title">👨🏻‍💻 About Me</h1>
+
+			            <div class="academic-card about-card">
+			                <p class="about-intro">
+			                    Hi! I am
+			                    <b>
+			                        Zhenqi Jia
+			                        (<a href="https://Coder-jzq.github.io/">贾真琦</a>)
+			                    </b>.
+			                    My master’s and doctoral advisor is
+			                    <a href="https://ttslr.github.io/index_ruiliu.html">Prof. Rui Liu</a>.
+			                </p>
+
+			                <div class="about-motto">
+			                    Stay humble, stay hungry, keep learning.
+			                    <br><br>
+			                    I look forward to becoming friends with you! 😊
+			                </div>
+			            </div>
+			        </header>
+
+			        <footer class="page__meta"></footer>
 			    </div>
 			</article>
 			
@@ -222,8 +961,8 @@
 			<article id="news" class="page tab-content">
 			    <div class="page__inner-wrap">
 			        <header>
-					<h1 id="-news" style="font-size: 2.4rem;">🔊 News</h1>
-					<ul>
+					<h1 class="academic-page-title">🔊 News</h1>
+					<ul class="news-list">
 						<hr />
 						<li>[09/2026] 🎉 Congratulations! Two of our papers (with me as a co-author) have been accepted by <b>NCMMSC 2026</b>. 🐎</li>
 						<li>[08/2026] 🎉 Our work ranked <b>4th</b> in <b>MER2026-Cross (ACM MM 2026 Challenge)</b>. 🐎</li>
@@ -263,7 +1002,7 @@
 					<header>
 			
 						<!-- ================= 个人著作 ================= -->
-						<h1 style="font-size: 2rem; color: #352c48; font-family: 'Arial', sans-serif; text-align: center; margin: 20px 0;">
+						<h1 class="academic-page-title" style="text-align: center;">
 							🌟 Representative Publications
 						</h1>
 						<hr />
@@ -411,7 +1150,7 @@
 			
 			
 						<!-- ================= 合作著作 ================= -->
-						<h1 style="font-size: 2rem; color: #352c48; text-align: center; font-family: 'Arial', sans-serif; text-align: center; margin: 20px 0;">
+						<h1 class="academic-page-title" style="font-size: 2rem; text-align: center; margin-top: 35px;">
 							🤝 Co-authored Publications
 						</h1>
 
@@ -560,17 +1299,159 @@
 				</div>
 			</article>
 
+
+
+			<!-- ================= Achievements ================= -->
+			<article id="achievements" class="page tab-content">
+			    <div class="page__inner-wrap">
+			        <header>
+			
+			            <h1 class="academic-page-title">🏅 Achievements</h1>
+			
+			
+			            <!-- ================= Honors ================= -->
+			            <div class="achievement-section">
+			
+			                <h2 class="achievement-title">
+			                    🎓 Honors
+			                </h2>
+			
+			                <div class="achievement-card">
+			
+			                    <span class="achievement-year">2026</span>
+			
+			                    <div class="achievement-name">
+			                        China Scholarship Council (CSC) Joint PhD Program
+			                    </div>
+			
+			                    <p class="achievement-desc">
+			                        Awarded funding from the
+			                        <b>China Scholarship Council (CSC)</b>
+			                        for a Joint PhD Program, with a planned research visit to
+			                        <b>CVSSP, University of Surrey</b>,
+			                        under the supervision of
+			                        <b>Prof. Wenwu Wang</b>.
+			                    </p>
+			
+			                </div>
+			
+			            </div>
+			
+			
+			            <!-- ================= Projects ================= -->
+			            <div class="achievement-section">
+			
+			                <h2 class="achievement-title">
+			                    🚀 Projects
+			                </h2>
+			
+			
+			                <!-- Project 1 -->
+			                <div class="achievement-card">
+			
+			                    <span class="achievement-year">2026</span>
+			
+			                    <div class="achievement-name">
+			                        面向拟人化情感表达与高效上下文理解的对话语音合成大模型关键技术研究
+			                    </div>
+			
+			                    <p class="achievement-desc">
+			                        Doctoral Innovation Research Project,
+			                        <b>Inner Mongolia University</b>.
+			                    </p>
+			
+			                    <div class="achievement-meta">
+			                        <span>
+			                            <b>Role:</b>
+			                            <span class="achievement-highlight">
+			                                Principal Investigator
+			                            </span>
+			                        </span>
+			
+			                        <span>
+			                            <b>Funding:</b> ¥10,000
+			                        </span>
+			                    </div>
+			
+			                </div>
+			
+			
+			                <!-- Project 2 -->
+			                <div class="achievement-card">
+			
+			                    <span class="achievement-year">2026</span>
+			
+			                    <div class="achievement-name">
+			                        基于多模态多尺度上下文建模的重音对话语音合成
+			                    </div>
+			
+			                    <p class="achievement-desc">
+			                        Master's Innovation Research Project,
+			                        <b>Inner Mongolia University</b>.
+			                    </p>
+			
+			                    <div class="achievement-meta">
+			                        <span>
+			                            <b>Role:</b>
+			                            <span class="achievement-highlight">
+			                                Principal Investigator
+			                            </span>
+			                        </span>
+			
+			                        <span>
+			                            <b>Funding:</b> ¥4,000
+			                        </span>
+			                    </div>
+			
+			                </div>
+			
+			
+			            </div>
+			
+			        </header>
+			
+			        <footer class="page__meta"></footer>
+			    </div>
+			</article>
+			<!-- ================= Achievements End ================= -->
+
+
+
+
 			
 			<!-- 服务项 -->
-			<article id="services" class="page tab-content" >
+			<article id="services" class="page tab-content">
 			    <div class="page__inner-wrap">
-					<header>
-					    <h1 id="-servs" style="font-size: 2.4rem;">🤦‍♂️️ Reviewing Experience</h1>
-					    <ul>
-					        <li><strong>Journal Reviewer:</strong>TASLP 2026, ESWA 2026, DI 2025</li>
-					        <li><strong>Conference Reviewer:</strong> AAAI 2026/2027, ICASSP 2025/2026/2027, ICMR 2026, IJCNN 2025/2027, NCMMSC 2026, CIKM 2026 Workshop LASS 2026</li>
-					    </ul>
-					</header>
+			        <header>
+			            <h1 class="academic-page-title">🤦‍♂️ Reviewing Experience</h1>
+
+			            <div class="academic-card service-card">
+			                <div class="service-title">📖 Journal Reviewer</div>
+			                <div class="service-content">
+			                    <span class="service-tag">IEEE TASLP 2026</span>
+			                    <span class="service-tag">Expert Systems with Applications 2026</span>
+			                    <span class="service-tag">Digital Intelligence 2025</span>
+			                </div>
+			            </div>
+
+			            <div class="academic-card service-card">
+			                <div class="service-title">🎓 Conference Reviewer</div>
+			                <div class="service-content">
+			                    <span class="service-tag">AAAI 2026</span>
+			                    <span class="service-tag">AAAI 2027</span>
+			                    <span class="service-tag">ICASSP 2025</span>
+			                    <span class="service-tag">ICASSP 2026</span>
+			                    <span class="service-tag">ICASSP 2027</span>
+			                    <span class="service-tag">ICMR 2026</span>
+			                    <span class="service-tag">IJCNN 2025</span>
+			                    <span class="service-tag">IJCNN 2027</span>
+			                    <span class="service-tag">NCMMSC 2026</span>
+			                    <span class="service-tag">CIKM 2026 Workshop</span>
+			                    <span class="service-tag">LASS 2026</span>
+			                </div>
+			            </div>
+			        </header>
+
 			        <footer class="page__meta"></footer>
 			    </div>
 			</article>
@@ -649,5 +1530,45 @@
 				});
 			});
 		</script>
+		<script>
+			function applyColorTheme(theme) {
+				var html = document.documentElement;
+				var icon = document.getElementById('themeSwitcherIcon');
+				var label = document.getElementById('themeSwitcherText');
+
+				html.setAttribute('data-theme', theme);
+
+				try {
+					localStorage.setItem('jzq-color-theme', theme);
+				} catch (e) {}
+
+				if (theme === 'ice') {
+					if (icon) icon.textContent = '🧊';
+					if (label) label.textContent = 'Ice Blue';
+				} else {
+					if (icon) icon.textContent = '🌸';
+					if (label) label.textContent = 'Soft Pink';
+				}
+			}
+
+			function toggleColorTheme() {
+				var currentTheme =
+					document.documentElement.getAttribute('data-theme') || 'pink';
+
+				applyColorTheme(currentTheme === 'ice' ? 'pink' : 'ice');
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				var savedTheme = 'pink';
+
+				try {
+					savedTheme =
+						localStorage.getItem('jzq-color-theme') || 'pink';
+				} catch (e) {}
+
+				applyColorTheme(savedTheme);
+			});
+		</script>
+
     </body>
 </html>
