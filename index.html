@@ -186,7 +186,10 @@
 			    font-weight: 600;
 			}
 			
-			
+			.badge {
+			    border-radius: 12px;
+			    padding: 5px 14px;
+			}
 			
 
 			/* ================= Global Page Style ================= */
@@ -398,6 +401,51 @@
 			    .masthead__menu-item:not(.masthead__menu-item--lg) > a {
 			        padding: 6px 9px !important;
 			    }
+			}
+			/* ================= Publications ================= */
+			
+			.paper-box {
+			    display: flex;
+			    align-items: center;
+			    gap: 18px;
+			
+			    padding: 18px 22px;
+			    margin-bottom: 20px;
+			    box-sizing: border-box;
+			
+			    border: none;
+			    border-radius: 22px;
+			
+			    background: linear-gradient(145deg, #f7f9fd, #eef3fb);
+			
+			    box-shadow:
+			        10px 10px 22px rgba(163, 177, 198, 0.18),
+			        -10px -10px 22px rgba(255, 255, 255, 0.95),
+			        inset 1px 1px 0 rgba(255, 255, 255, 0.65);
+			
+			    transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+			
+			.paper-box:hover {
+			    transform: translateY(-2px);
+			    box-shadow:
+			        12px 12px 24px rgba(163, 177, 198, 0.22),
+			        -12px -12px 24px rgba(255, 255, 255, 1),
+			        inset 1px 1px 0 rgba(255, 255, 255, 0.72);
+			}
+			
+			.paper-box-image img {
+			    display: block;
+			    width: 100%;
+			    max-height: 115px;
+			    object-fit: contain;
+			
+			    border-radius: 14px;
+			}
+			
+			.paper-box-text p {
+			    margin: 0;
+			    line-height: 1.65;
 			}
 
 
@@ -682,21 +730,29 @@
 
 			/* Publication cards inherit the Ice theme without changing layout */
 			html[data-theme="ice"] .paper-box {
-				background:
-					linear-gradient(
-						135deg,
-						rgba(255, 255, 255, 0.93),
-						rgba(244, 249, 255, 0.88),
-						rgba(249, 247, 255, 0.86)
-					) !important;
+				background: linear-gradient(
+					145deg,
+					rgba(245, 249, 255, 0.96),
+					rgba(236, 243, 252, 0.94)
+				) !important;
 
-				border: 1px solid rgba(101, 147, 205, 0.14);
+				border: none;
+
+				border-radius: 22px;
 
 				box-shadow:
-					8px 10px 24px rgba(71, 105, 151, 0.09),
-					-5px -5px 16px rgba(255, 255, 255, 0.82);
+					10px 10px 24px rgba(136, 165, 191, 0.16),
+					-10px -10px 24px rgba(255, 255, 255, 0.95),
+					inset 1px 1px 0 rgba(255, 255, 255, 0.68);
 			}
-
+			
+			html[data-theme="ice"] .paper-box:hover {
+			    box-shadow:
+			        12px 12px 26px rgba(136, 165, 191, 0.20),
+			        -12px -12px 26px rgba(255, 255, 255, 1),
+			        inset 1px 1px 0 rgba(255, 255, 255, 0.75);
+			}
+				
 			html[data-theme="ice"] .badge {
 				background: linear-gradient(135deg, #6fa5e3, #7e8fdc) !important;
 				color: #ffffff !important;
@@ -1311,19 +1367,35 @@
 			
 			            <!-- ================= Honors ================= -->
 			            <div class="achievement-section">
-			
+			            
 			                <h2 class="achievement-title">
 			                    🎓 Honors
 			                </h2>
-			
+			            
+						
+							<div class="achievement-card">
+										            
+							    <span class="achievement-year">2026</span>
+										            
+							    <div class="achievement-name">
+							        CAST Young Science and Technology Talent Development Program — PhD Student Program
+							    </div>
+							    
+							    <p class="achievement-desc">
+							        Selected for the
+							        <b>2026 CAST Young Science and Technology Talent Development Program — PhD Student Program</b>.
+							    </p>
+										            
+							</div>
+						
 			                <div class="achievement-card">
-			
+			            
 			                    <span class="achievement-year">2026</span>
-			
+			            
 			                    <div class="achievement-name">
 			                        China Scholarship Council (CSC) Joint PhD Program
 			                    </div>
-			
+			            
 			                    <p class="achievement-desc">
 			                        Awarded funding from the
 			                        <b>China Scholarship Council (CSC)</b>
@@ -1332,9 +1404,12 @@
 			                        under the supervision of
 			                        <b>Prof. Wenwu Wang</b>.
 			                    </p>
-			
+			            
 			                </div>
-			
+			            
+			            
+			                
+			            
 			            </div>
 			
 			
@@ -1344,9 +1419,42 @@
 			                <h2 class="achievement-title">
 			                    🚀 Projects
 			                </h2>
+							
+							
+							
+							
+							<!-- Project 1 -->
+							<div class="achievement-card">
+							
+							    <span class="achievement-year">2025</span>
+							
+							    <div class="achievement-name">
+							        面向可解释上下文情感理解的多语种具身语音交互大模型关键技术研究
+							    </div>
+							
+							    <p class="achievement-desc">
+							        Research Innovation Project,
+							        <b>Inner Mongolia Autonomous Region</b>.
+							    </p>
+							
+							    <div class="achievement-meta">
+							        <span>
+							            <b>Role:</b>
+							            <span class="achievement-highlight">
+							                Principal Investigator
+							            </span>
+							        </span>
+							
+							        <span>
+							            <b>Funding:</b> ¥40,000
+							        </span>
+							    </div>
+							
+							</div>
+							
+							
 			
-			
-			                <!-- Project 1 -->
+			                <!-- Project 2 -->
 			                <div class="achievement-card">
 			
 			                    <span class="achievement-year">2026</span>
@@ -1376,7 +1484,7 @@
 			                </div>
 			
 			
-			                <!-- Project 2 -->
+			                <!-- Project 3 -->
 			                <div class="achievement-card">
 			
 			                    <span class="achievement-year">2025</span>
